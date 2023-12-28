@@ -1,0 +1,76 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "checkJs": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "types": [
+      "node",
+      "react",
+      "cypress",
+      "./cypress.d.ts"
+    ],
+    "importHelpers": true,
+    "declaration": true,
+    "declarationMap": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    //
+    //    "noImplicitReturns": true,
+    //    "noImplicitThis": true,
+    //    "noImplicitAny": true,
+    //    "strictNullChecks": true,
+    //"rootDir": "../src",
+    "target": "ES2022",
+    //"ES2022"
+    "module": "NodeNext",
+    //"NodeNext","CommonJS","ES2015"
+    "moduleResolution": "NodeNext",
+    //"NodeNext","Bundler"
+    //"customConditions": ["module"],
+
+
+    // Recommended
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "allowArbitraryExtensions": true,
+    "verbatimModuleSyntax": false,
+    // or `isolatedModules`
+
+    //"outDir": "./",
+    //"declarationDir": "types",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
+    "baseUrl": "./"
+  },
+  "include": [
+    "./src/**/*.ts*",
+    "./demo/**/*.ts*",
+    "./configuration/**/*.ts*",
+    "./cypress/support/component.ts"
+  ],
+  "exclude": [
+    "./node_modules",
+    "./src/**/*.test.ts*",
+    "./src/**/*.spec.*.ts*"
+
+    //"./cypress*.ts*",
+    //"./cypress/**/*.ts*",
+    //"./cypress.config.ts",
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "ESNext",
+      "moduleResolution": "Node"
+    }
+  }
+}

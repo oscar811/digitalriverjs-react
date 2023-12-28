@@ -1,0 +1,547 @@
+{
+  "paymentSessionDataUrl": "https://tools.drapi.io/cm/drop-in/drRequestPaymentSession.php",
+  "publicApiKey": "pk_test_1ee060f7ceeb46cfbfe73d0a85316d44",
+  "_1": "pk_sys_8d653ccb6ca741a7b9ae3726c74ec1f2",
+  "secretApiKey": "sk_test_6f11b4359b8d4098b4e721485c6c4f85",
+  "_2": "sk_sys_ef88de58e0e04683af4de3fb01fee6cf",
+  "locale": "en-US",
+  "defaultAddress": {
+    "billTo": {
+      "be": {
+        "firstName": "Belgian",
+        "lastName": "Tester",
+        "email": "belgianTester@digitalriver.com",
+        "phoneNumber": "0496 18 65419",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "Witbakkerstraat 301",
+          "line2": "",
+          "city": "Sint-Job-int-Goor",
+          "state": "Antwerp",
+          "country": "BE",
+          "postalCode": "2960"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "br": {
+        "firstName": "Brazil",
+        "lastName": "Tester",
+        "email": "brazilTester@digitalriver.com",
+        "phoneNumber": "9144782142",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "Vila São João 1451",
+          "line2": "",
+          "city": "Belém",
+          "state": "Pará",
+          "country": "BR",
+          "postalCode": "66065-025"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "ca": {
+        "firstName": "Canadian",
+        "lastName": "Tester",
+        "email": "canadianTester@digitalriver.com",
+        "phoneNumber": "4037375268",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "3597  Avenue de Port-Royal",
+          "line2": "",
+          "city": "Bonaventure",
+          "state": "Quebec",
+          "country": "CA",
+          "postalCode": "G0C 1E0"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "gb": {
+        "firstName": "British",
+        "lastName": "Tester",
+        "email": "britishTester@digitalriver.com",
+        "phoneNumber": "077 1723 6984",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "110  Uxbridge Road",
+          "line2": "",
+          "city": "SLAUGHDEN",
+          "state": "",
+          "country": "GB",
+          "postalCode": "IP15 9RA"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "fr": {
+        "firstName": "French",
+        "lastName": "Tester",
+        "email": "frenchTester@digitalriver.com",
+        "phoneNumber": "04.42.13.23549",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "20  boulevard de Prague",
+          "line2": "",
+          "city": "NÎMES",
+          "state": "Languedoc-Roussillon",
+          "country": "FR",
+          "postalCode": "30000"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "de": {
+        "firstName": "German",
+        "lastName": "Tester",
+        "email": "germanTester@digitalriver.com",
+        "phoneNumber": "1231231234",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "Neue Mainzer Str. 52-58",
+          "line2": "",
+          "city": "Frankfurt",
+          "state": "",
+          "country": "DE",
+          "postalCode": "60311"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "it": {
+        "firstName": "Italian",
+        "lastName": "Tester",
+        "email": "italianTester@digitalriver.com",
+        "phoneNumber": "0338 9388497",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "Via Gaetano Donizetti 117",
+          "line2": "",
+          "city": "Mezzane Di Sotto",
+          "state": "Verona",
+          "country": "IT",
+          "postalCode": "37030"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "jp": {
+        "firstName": "Japanese",
+        "lastName": "Tester",
+        "email": "japaneseTester@digitalriver.com",
+        "phoneNumber": "+8159-258-2940",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "Sajik-ro-3-gil 23",
+          "line2": "102-dong 304-ho",
+          "city": "Tokyo",
+          "state": "",
+          "country": "JP",
+          "postalCode": "106-0044"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "Minato-ku",
+          "phoneticFirstName": "Japanese",
+          "phoneticLastName": "Tester",
+          "division": "Jongno-gu"
+        }
+      },
+      "kr": {
+        "firstName": "Korean",
+        "lastName": "Tester",
+        "email": "koreanTester@digitalriver.com",
+        "phoneNumber": "+82-9-451-8029",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "Sajik-ro-3-gil 23",
+          "line2": "102-dong 304-ho",
+          "city": "Seoul-teukbyeolsi",
+          "state": "",
+          "country": "KR",
+          "postalCode": "30174"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "mx": {
+        "firstName": "Mexican",
+        "lastName": "Tester",
+        "email": "mexicoTester@digitalriver.com",
+        "phoneNumber": "9144782142",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "CHICHIMECAS M2 NO. 108 NO. LOTE 9",
+          "line2": "",
+          "city": "DISTRITO FEDERAL",
+          "state": "Coyoacán",
+          "country": "MX",
+          "postalCode": "04300"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "pt": {
+        "firstName": "Portuguese",
+        "lastName": "Tester",
+        "email": "portugueseTester@digitalriver.com",
+        "phoneNumber": "21 243 636 6020",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "Avenida Madre Andaluz 98",
+          "line2": "",
+          "city": "Aldeia de Além",
+          "state": "Santarém",
+          "country": "PT",
+          "postalCode": "2025-120"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "es": {
+        "firstName": "Spanish",
+        "lastName": "Tester",
+        "email": "spanishTester@digitalriver.com",
+        "phoneNumber": "661 225 319",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "Lamas Carbajal 23",
+          "line2": "",
+          "city": "Dos Hermanas",
+          "state": "Seville",
+          "country": "ES",
+          "postalCode": "41700"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "us": {
+        "firstName": "US",
+        "lastName": "Tester",
+        "email": "usTester@digitalriver.com",
+        "phoneNumber": "9522251234",
+        "organization": "Digital River",
+        "upstreamId": "123456789",
+        "address": {
+          "line1": "10380 Bren Rd W",
+          "line2": "",
+          "city": "Minnetonka",
+          "state": "",
+          "country": "MN",
+          "postalCode": "55343"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      }
+    },
+    "shipTo": {
+      "be": {
+        "name": "Belgian Tester",
+        "email": "belgianTester@digitalriver.com",
+        "phone": "0496 18 65419",
+        "address": {
+          "line1": "Witbakkerstraat 301",
+          "line2": "",
+          "city": "Sint-Job-int-Goor",
+          "state": "Antwerp",
+          "country": "BE",
+          "postalCode": "2960"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "br": {
+        "name": "Brazil Tester",
+        "email": "brazilTester@digitalriver.com",
+        "phone": "9144782142",
+        "address": {
+          "line1": "Vila São João 1451",
+          "line2": "",
+          "city": "Belém",
+          "state": "Pará",
+          "country": "BR",
+          "postalCode": "66065-025"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "ca": {
+        "name": "Canadian Tester",
+        "email": "canadianTester@digitalriver.com",
+        "phone": "4037375268",
+        "address": {
+          "line1": "3597  Avenue de Port-Royal",
+          "line2": "",
+          "city": "Bonaventure",
+          "state": "Quebec",
+          "country": "CA",
+          "postalCode": "G0C 1E0"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "gb": {
+        "name": "British Tester",
+        "email": "britishTester@digitalriver.com",
+        "phone": "077 1723 6984",
+        "address": {
+          "line1": "110  Uxbridge Road",
+          "line2": "",
+          "city": "SLAUGHDEN",
+          "state": "",
+          "country": "GB",
+          "postalCode": "IP15 9RA"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "fr": {
+        "name": "French Tester",
+        "email": "frenchTester@digitalriver.com",
+        "phone": "04.42.13.23549",
+        "address": {
+          "line1": "20  boulevard de Prague",
+          "line2": "",
+          "city": "NÎMES",
+          "state": "Languedoc-Roussillon",
+          "country": "FR",
+          "postalCode": "30000"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "de": {
+        "name": "German",
+        "email": "germanTester@digitalriver.com",
+        "phone": "1231231234",
+        "address": {
+          "line1": "Neue Mainzer Str. 52-58",
+          "line2": "",
+          "city": "Frankfurt",
+          "state": "",
+          "country": "DE",
+          "postalCode": "60311"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "it": {
+        "name": "Italian Tester",
+        "email": "italianTester@digitalriver.com",
+        "phone": "0338 9388497",
+        "address": {
+          "line1": "Via Gaetano Donizetti 117",
+          "line2": "",
+          "city": "Mezzane Di Sotto",
+          "state": "Verona",
+          "country": "IT",
+          "postalCode": "37030"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "jp": {
+        "name": "Japanese Tester",
+        "email": "japaneseTester@digitalriver.com",
+        "phone": "+8159-258-2940",
+        "address": {
+          "line1": "Sajik-ro-3-gil 23",
+          "line2": "102-dong 304-ho",
+          "city": "Tokyo",
+          "state": "",
+          "country": "JP",
+          "postalCode": "106-0044"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "Minato-ku",
+          "phoneticFirstName": "Japanese",
+          "phoneticLastName": "Tester",
+          "division": "Jongno-gu"
+        }
+      },
+      "kr": {
+        "name": "Korean Tester",
+        "email": "koreanTester@digitalriver.com",
+        "phone": "+82-9-451-8029",
+        "address": {
+          "line1": "Sajik-ro-3-gil 23",
+          "line2": "102-dong 304-ho",
+          "city": "Seoul-teukbyeolsi",
+          "state": "",
+          "country": "KR",
+          "postalCode": "30174"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": "Jongno-gu"
+        }
+      },
+      "mx": {
+        "name": "Mexican Tester",
+        "email": "mexicoTester@digitalriver.com",
+        "phone": "9144782142",
+        "address": {
+          "line1": "CHICHIMECAS M2 NO. 108 NO. LOTE 9",
+          "line2": "",
+          "city": "DISTRITO FEDERAL",
+          "state": "Coyoacán",
+          "country": "MX",
+          "postalCode": "04300"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "pt": {
+        "name": "Portuguese Tester",
+        "email": "portugueseTester@digitalriver.com",
+        "phone": "21 243 636 6020",
+        "address": {
+          "line1": "Avenida Madre Andaluz 98",
+          "line2": "",
+          "city": "Aldeia de Além",
+          "state": "Santarém",
+          "country": "PT",
+          "postalCode": "2025-120"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "es": {
+        "name": "Spanish Tester",
+        "email": "spanishTester@digitalriver.com",
+        "phone": "661 225 319",
+        "address": {
+          "line1": "Lamas Carbajal 23",
+          "line2": "",
+          "city": "Dos Hermanas",
+          "state": "Seville",
+          "country": "ES",
+          "postalCode": "41700"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      },
+      "us": {
+        "name": "US Tester",
+        "email": "usTester@digitalriver.com",
+        "phone": "9522251234",
+        "address": {
+          "line1": "10380 Bren Rd W",
+          "line2": "",
+          "city": "Minnetonka",
+          "state": "",
+          "country": "MN",
+          "postalCode": "55343"
+        },
+        "additionalAddressInfo": {
+          "neighborhood": "",
+          "phoneticFirstName": "",
+          "phoneticLastName": "",
+          "division": ""
+        }
+      }
+    }
+  }
+}

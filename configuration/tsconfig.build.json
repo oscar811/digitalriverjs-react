@@ -1,0 +1,24 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "../src",
+    "baseUrl": "../src",
+    "outDir": "../",
+    //"declarationDir": "types",
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "types": [
+      "node",
+      "react"
+    ]
+  },
+  "include": [
+    "../src/**/*.ts*"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../src/**/*.test.ts*",
+    "../src/**/*.spec.*.ts*",
+    "../demo"
+  ]
+}
