@@ -247,7 +247,7 @@
     </DigitalRiverContainer>
     ```
 
-* ## Konbini Element
+* ## [Konbini Element](#konbini)
 
   ### React component
     ```javascript
@@ -258,7 +258,7 @@
     </DigitalRiverContainer>
     ```
 
-* ## (Online Banking (IBP) Element)[#onlineBanking]
+* ## [Online Banking (IBP) Element](#onlineBanking)
 
   ### Configuration
 
@@ -280,7 +280,7 @@
     </DigitalRiverContainer>
     ```
 
-* ## (Offline Refund Element)[#offlineRefund]
+* ## [Offline Refund Element](#offlineRefund)
 
   ### Configuration
 
