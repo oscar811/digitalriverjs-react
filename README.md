@@ -45,10 +45,10 @@ the Digital River API.
 #### Examples of element usages
 
 - [DigitalRiver.js with Elements](src/drjs/README.md)
-  - [Credit Card](src/drjs/README.md#creditcard) 
-  - [GooglePay](src/drjs/README.md#googlePay)
-  - [ApplePay](src/drjs/README.md#applePay)
-  - [PayPal](src/drjs/README.md#payPal)
+  - [Credit Card](src/drjs/README.md#credit-card-elements) 
+  - [GooglePay](src/drjs/README.md#google-pay-element)
+  - [ApplePay](src/drjs/README.md#apple-pay-element)
+  - [PayPal](src/drjs/README.md#paypal-element)
 - [Dop-In Payment](src/dropin/README.md)
 - [Dynamic Pricing](src/dynamic-pricing/README.md)
 - [Prebuilt Checkout](src/prebuilt-checkout/README.md)
