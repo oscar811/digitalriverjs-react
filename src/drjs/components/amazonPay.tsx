@@ -122,6 +122,9 @@ export const AmazonPay = ({
      */
     const clear = () => {
         const placeholder = document.getElementById(elementId);
+        if (amazonpay) {
+            amazonpay.destroy();
+        }
         if (placeholder) {
             placeholder.replaceChildren();
         }

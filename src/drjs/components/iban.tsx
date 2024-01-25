@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import {useDigitalRiverContext} from "../../digitalriver";
 import {DigitalRiverElement, ElementEventArgument, ElementOnChangeArgument, ElementOptions} from "../../types";
 
+const PAYMENT_METHOD_TYPE = 'iban';
 let iban: DigitalRiverElement | null;
 
 /**
@@ -44,12 +45,13 @@ export const IBAN = ({
         if (!iban && drContext.digitalRiver && placeholder) {
             try {
                 placeholder.replaceChildren();
-                iban = drContext.digitalRiver.createElement('iban', ibanOptions);
+                iban = drContext.digitalRiver.createElement(PAYMENT_METHOD_TYPE, ibanOptions);
                 iban.mount(elementId);
                 iban.on('change', onChange);
                 iban.on('ready', onReady);
                 iban.on('focus', onFocus);
                 iban.on('blur', onBlur);
+                drContext.setElement(PAYMENT_METHOD_TYPE, iban);
             } catch (e) {
                 console.error(e);
                 drContext.clear();

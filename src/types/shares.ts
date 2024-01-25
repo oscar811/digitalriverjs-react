@@ -33,9 +33,10 @@ export interface DigitalRiverObject {
 
     components(configuration: ComponentConfiguration): DigitalRiverComponentObject;
 
-    // handleNextAction()
+    retrieveAvailablePaymentMethods(paymentMethodOptions: PaymentMethodOptions): Promise<PaymentMethods>;
+    handleNextAction(nextActionOptions: NextActionOptions ): Promise<PaymentSource>;
     // retrieveOnlineBankingBanks()
-    // retrieveAvailablePaymentMethods()
+
     // createSource()
     // createStoredPaymentSource()
 }
@@ -78,6 +79,13 @@ export interface UpdatePaymentRequest {
     shippingOptions?: PaymentRequestShippingOption[];
     error?: {
         message: string;
+    }
+}
+
+export interface  NextActionOptions {
+    action: string;
+    data: {
+        sessionId: string;
     }
 }
 
@@ -481,6 +489,30 @@ export interface CheckoutSession {
 
 export interface PaymentMethod {
     type: string;
+    flow?: string;
+    localizedDisplayName?: string;
+    displayName?: string;
+    supportsRecurring?: boolean;
+    supportsFreeTrial?: boolean;
+    supportsStorage?: boolean;
+    images?: {
+        iconImage: string;
+    }
+    defaultMandate?: {
+        terms: string;
+    }
+}
+
+export interface PaymentMethods {
+    paymentMethods: PaymentMethod[];
+}
+
+export interface PaymentMethodOptions {
+    sessionId?: string;
+    country?: string;
+    supportsFreeTrial?: boolean;
+    supportsRecurring?: boolean;
+    supportsStorage?: boolean;
 }
 
 export interface ShippingMethod {

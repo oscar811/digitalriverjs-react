@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import {useDigitalRiverContext} from "../../digitalriver";
 import {DigitalRiverElement, ElementEventArgument, ElementOptions} from "../../types";
 
+const PAYMENT_METHOD_TYPE = 'ideal';
 let ideal: DigitalRiverElement | null;
 
 /**
@@ -35,10 +36,11 @@ export const IDEAL = ({
         if (!ideal && drContext.digitalRiver && placeholder && idealOptions) {
             try {
                 placeholder.replaceChildren();
-                ideal = drContext.digitalRiver.createElement('ideal', idealOptions);
+                ideal = drContext.digitalRiver.createElement(PAYMENT_METHOD_TYPE, idealOptions);
                 ideal.mount(elementId);
                 ideal.on('change', onChange);
                 ideal.on('ready', onReady);
+                drContext.setElement(PAYMENT_METHOD_TYPE, ideal);
             } catch (e) {
                 console.error(e);
                 drContext.clear();

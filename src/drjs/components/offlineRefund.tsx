@@ -10,6 +10,7 @@ import {
     StyleOption
 } from "../../types";
 
+const PAYMENT_METHOD_TYPE = 'offlinerefund';
 let offlinerefund: DigitalRiverElement | null;
 
 /**
@@ -45,10 +46,11 @@ export const OfflineRefund = ({
         if (!offlinerefund && drContext.digitalRiver && placeholder) {
             try {
                 placeholder.replaceChildren();
-                offlinerefund = drContext.digitalRiver.createElement('offlinerefund', offlineRefundOptions);
+                offlinerefund = drContext.digitalRiver.createElement(PAYMENT_METHOD_TYPE, offlineRefundOptions);
                 offlinerefund.mount(elementId);
                 offlinerefund.on('change', onChange);
                 offlinerefund.on('ready', onReady);
+                drContext.setElement(PAYMENT_METHOD_TYPE, offlinerefund);
             } catch (e) {
                 console.error(e);
                 drContext.clear();

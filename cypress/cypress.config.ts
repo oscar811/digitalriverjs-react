@@ -4,12 +4,23 @@ export default defineConfig({
     defaultCommandTimeout: 10000,
     responseTimeout: 60000,
     chromeWebSecurity: false,
+    reporter: 'mochawesome',
+    reporterOptions: {
+        charts: true,
+        overwrite: true,
+        html: false,
+        json: true,
+        embeddedScreenshots: true,
+        useInlineDiffs: true,
+        reportFilename: "[name].html",
+        reportDir: "cypress/report/mochawesome"
+    },
     env: {
         codeCoverage: {
             exclude: "cypress/**/*.*",
-            url: "http://localhost:5137/__coverage__"
+            url: "http://localhost:5173/__coverage__"
         },
-        apiUrl: "http://localhost:5137"
+        apiUrl: "http://localhost:5173"
     },
     retries: {
         runMode: 2,
@@ -31,7 +42,7 @@ export default defineConfig({
     },
 
     e2e: {
-        baseUrl: 'http://localhost:5137',
+        baseUrl: 'http://localhost:5173',
         setupNodeEvents(on, config) {
             // implement node event listeners here
             // on(

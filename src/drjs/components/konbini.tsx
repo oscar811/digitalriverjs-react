@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import {useDigitalRiverContext} from "../../digitalriver";
 import {DigitalRiverElement, ElementEventArgument, ElementOnChangeArgument, ElementOptions} from "../../types";
 
+const PAYMENT_METHOD_TYPE = 'konbini';
 let konbini: DigitalRiverElement | null;
 
 /**
@@ -24,7 +25,7 @@ let konbini: DigitalRiverElement | null;
  */
 export const Konbini = ({
                             elementId = "dr-konbini",
-                            konbiniOptions,
+                            konbiniOptions = {},
                             onChange = () => {
                             },
                             onReady = () => {
@@ -44,12 +45,13 @@ export const Konbini = ({
         if (!konbini && drContext.digitalRiver && placeholder) {
             try {
                 placeholder.replaceChildren();
-                konbini = drContext.digitalRiver.createElement('konbini', konbiniOptions);
+                konbini = drContext.digitalRiver.createElement(PAYMENT_METHOD_TYPE, konbiniOptions);
                 konbini.mount(elementId);
                 konbini.on('change', onChange);
                 konbini.on('ready', onReady);
                 konbini.on('focus', onFocus);
                 konbini.on('blur', onBlur);
+                drContext.setElement(PAYMENT_METHOD_TYPE, konbini);
             } catch (e) {
                 console.error(e);
                 drContext.clear();

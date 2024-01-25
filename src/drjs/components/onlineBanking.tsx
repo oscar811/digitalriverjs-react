@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import {useDigitalRiverContext} from "../../digitalriver";
 import {DigitalRiverElement, ElementEventArgument, ElementOnChangeArgument, ElementOptions} from "../../types";
 
+const PAYMENT_METHOD_TYPE = 'onlinebanking';
 let onlinebanking: DigitalRiverElement | null;
 
 /**
@@ -44,12 +45,13 @@ export const OnlineBanking = ({
         if (!onlinebanking && drContext.digitalRiver && placeholder) {
             try {
                 placeholder.replaceChildren();
-                onlinebanking = drContext.digitalRiver.createElement('onlinebanking', onlineBankingOptions);
+                onlinebanking = drContext.digitalRiver.createElement(PAYMENT_METHOD_TYPE, onlineBankingOptions);
                 onlinebanking.mount(elementId);
                 onlinebanking.on('change', onChange);
                 onlinebanking.on('ready', onReady);
                 onlinebanking.on('focus', onFocus);
                 onlinebanking.on('blur', onBlur);
+                drContext.setElement(PAYMENT_METHOD_TYPE, onlinebanking);
             } catch (e) {
                 console.error(e);
                 drContext.clear();

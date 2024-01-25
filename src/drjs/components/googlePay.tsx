@@ -89,6 +89,9 @@ export const GooglePay = ({
      */
     const clear = () => {
         const placeholder = document.getElementById(elementId);
+        if(googlepay) {
+            googlepay.destroy();
+        }
         if (placeholder) {
             placeholder.replaceChildren();
         }
@@ -165,8 +168,8 @@ export interface GooglePayPaymentRequest extends PaymentRequest {
 }
 
 export interface GooglePayStyle {
-    buttonType?: GooglePayButtonType;
-    buttonColor?: GooglePayButtonColor;
+    buttonType?: GooglePayButtonType | string;
+    buttonColor?: GooglePayButtonColor | string;
     buttonLanguage?: string;
 }
 

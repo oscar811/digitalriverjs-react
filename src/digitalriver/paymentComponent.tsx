@@ -45,6 +45,7 @@ export const PaymentContext = ({
         if (drContext.elements && drContext.elements[elementPayment]) {
             sourceArgs.push(drContext.elements[elementPayment]);
         }
+console.log('drContext.elements',drContext.elements);
         const sourceRequestPayload: any = {
             type: payment
         };

@@ -1,9 +1,9 @@
 {
   "paymentSessionDataUrl": "https://tools.drapi.io/cm/drop-in/drRequestPaymentSession.php",
   "publicApiKey": "pk_test_1ee060f7ceeb46cfbfe73d0a85316d44",
-  "_1": "pk_sys_8d653ccb6ca741a7b9ae3726c74ec1f2",
+  "publicApiKey_1": "pk_sys_8d653ccb6ca741a7b9ae3726c74ec1f2",
   "secretApiKey": "sk_test_6f11b4359b8d4098b4e721485c6c4f85",
-  "_2": "sk_sys_ef88de58e0e04683af4de3fb01fee6cf",
+  "secretApiKey_2": "sk_sys_ef88de58e0e04683af4de3fb01fee6cf",
   "locale": "en-US",
   "defaultAddress": {
     "billTo": {

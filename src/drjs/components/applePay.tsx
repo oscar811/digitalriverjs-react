@@ -87,6 +87,9 @@ export const ApplePay = ({
      */
     const clear = () => {
         const placeholder = document.getElementById(elementId);
+        if(applepay) {
+            applepay.destroy();
+        }
         if (placeholder) {
             placeholder.replaceChildren();
         }
@@ -163,8 +166,8 @@ export interface ApplePayPaymentRequest extends PaymentRequest {
 }
 
 export interface ApplePayStyle {
-    buttonType?: ApplePayButtonType;
-    buttonColor?: ApplePayButtonColor;
+    buttonType?: ApplePayButtonType | string;
+    buttonColor?: ApplePayButtonColor | string;
     buttonLanguage?: string;
 }
 

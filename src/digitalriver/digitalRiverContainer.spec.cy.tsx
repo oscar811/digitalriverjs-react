@@ -24,8 +24,11 @@ describe('DigitalRiverContainer Component', () => {
 
     it('initializes Dynamic Pricing library', () => {
         mount(
-            <DigitalRiverContainer publicApiKey={demoConfigJson.publicApiKey} enableDynamicPricing={true}/>
+            <DigitalRiverContainer publicApiKey={demoConfigJson.publicApiKey} enableDynamicPricing={true}>
+                <span id="DR-currencySelector" />
+            </DigitalRiverContainer>
         );
         cy.window().its('DynamicPricing').should('exist')
     })
+
 })

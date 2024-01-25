@@ -8,7 +8,7 @@ const paymentType = 'dynamic-pricing';
 const defaultKey = demoConfigJson.publicApiKey;
 const locale = demoConfigJson.locale;
 const DynamicPricingDemo = () => {
-
+console.log('DynamicPricingDemo');
     return (
         <DigitalRiverContainer publicApiKey={defaultKey} enableDynamicPricing={true} locale={locale}>
             <span id="DR-currencySelector"/>

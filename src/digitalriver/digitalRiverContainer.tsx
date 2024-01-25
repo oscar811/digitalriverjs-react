@@ -10,6 +10,7 @@ import type {
     DynamicPricingObject
 } from "../types";
 import {ElementsMap} from "../types";
+import {useEffect} from "react";
 
 // URLs for Digital River JS and CSS files
 const DRJS_JS_URL = "https://js.digitalriverws.com/v1/DigitalRiver.js";
@@ -27,6 +28,8 @@ let digitalRiverCheckoutInstance: DigitalRiverCheckoutObject | null = null;
 let pbc_script: HTMLScriptElement | null = null;
 let dp_script: HTMLScriptElement | null = null;
 let dp_link: HTMLLinkElement | null = null;
+
+let digitalRiverDynamicPricing: boolean = false;
 
 // Create a new context for Digital River
 const DigitalRiverInnerContext = React.createContext({});
@@ -61,7 +64,7 @@ export const DigitalRiverContainer = ({
     // State hooks for Digital River objects
     const [digitalRiver, setDigitalRiver] = React.useState<DigitalRiverObject | null>();
     const [digitalRiverCheckout, setDigitalRiverCheckout] = React.useState<DigitalRiverCheckoutObject | null>();
-    const [dynamicPricing, setDynamicPricing] = React.useState<DynamicPricingObject | null>();
+    const [dynamicPricing, setDynamicPricing] = React.useState<DynamicPricingObject | null >();
     const [elements, setElements] = React.useState<ElementsMap>({});
 
     const [guid, setGuid] = React.useState('xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -108,6 +111,12 @@ export const DigitalRiverContainer = ({
     React.useEffect(() => {
         clear();
     }, [publicApiKey, locale, defaultCountry, enableDigitalRiver, enableDigitalRiverCheckout, enableDynamicPricing]);
+
+    useEffect(() => {
+        return () => {
+            clear();
+        }
+    }, []);
 
     // Initialize Digital River when enabled and public API key is provided
     React.useEffect(() => {
@@ -161,29 +170,31 @@ export const DigitalRiverContainer = ({
 
     // Initialize Dynamic Pricing when enabled and public API key is provided
     React.useEffect(() => {
-        if (enableDynamicPricing && !dynamicPricing && publicApiKey) {
-            if (!dp_link) {
-                dp_link = document.createElement('link');
-                dp_link.rel = "stylesheet";
-                dp_link.type = "text/css";
-                dp_link.href = DYNAMIC_PRICING_CSS_URL;
-                document.head.appendChild(dp_link);
-            }
-            if (!dp_script) {
-                dp_script = document.createElement('script');
-                dp_script.src = DYNAMIC_PRICING_JS_URL;
-                dp_script.async = true;
-                dp_script.setAttribute('data-dr-apiKey', publicApiKey);
-                dp_script.setAttribute('data-dr-currency-selector', currencySelectorElementId);
-                dp_script.onload = initDynamicPricing;
-                if (defaultCountry) {
-                    dp_script.setAttribute('data-dr-default-country', defaultCountry);
+        if (enableDynamicPricing && !digitalRiverDynamicPricing && publicApiKey ) {
+            const currencySelectorElement = document.getElementById(currencySelectorElementId);
+            if(currencySelectorElement) {
+                digitalRiverDynamicPricing = true;
+                if (!dp_link) {
+                    dp_link = document.createElement('link');
+                    dp_link.rel = "stylesheet";
+                    dp_link.type = "text/css";
+                    dp_link.href = DYNAMIC_PRICING_CSS_URL;
+                    document.head.appendChild(dp_link);
                 }
-                document.head.appendChild(dp_script);
-                return;
+                if (!dp_script) {
+                    dp_script = document.createElement('script');
+                    dp_script.src = DYNAMIC_PRICING_JS_URL;
+                    dp_script.async = true;
+                    dp_script.setAttribute('data-dr-apiKey', publicApiKey);
+                    dp_script.setAttribute('data-dr-currency-selector', currencySelectorElementId);
+                    dp_script.onload = initDynamicPricing;
+                    if (defaultCountry) {
+                        dp_script.setAttribute('data-dr-default-country', defaultCountry);
+                    }
+                    document.head.appendChild(dp_script);
+                }
             }
         }
-        return;
     }, [enableDynamicPricing, publicApiKey]);
 
     // Function to initialize Digital River
@@ -223,10 +234,10 @@ export const DigitalRiverContainer = ({
     }
 
     const initDynamicPricing = () => {
-
-        const DynamicPricingContstructor = (window as any).DynamicPricing;
-        if (DynamicPricingContstructor) {
-            setDynamicPricing(DynamicPricingContstructor);
+        const DynamicPricingConstructor = (window as any).DynamicPricing;
+        if (DynamicPricingConstructor) {
+            setDynamicPricing(DynamicPricingConstructor);
+            digitalRiverDynamicPricing = false;
         }
     }
 

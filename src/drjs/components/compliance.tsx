@@ -3,6 +3,8 @@ import {useEffect} from "react";
 import {useDigitalRiverContext} from "../../digitalriver";
 import type {DigitalRiverElement, ElementClasses} from "../../types";
 
+const PAYMENT_METHOD_TYPE = 'compliance';
+
 /**
  * `Compliance` is a component for rendering the Compliance component.
  * It provides a method to create a source for the payment.
@@ -31,8 +33,9 @@ export const Compliance = ({
         if (drContext.digitalRiver && placeholder) {
             try {
                 placeholder.replaceChildren();
-                compliance = drContext.digitalRiver.createElement('compliance', complianceOptions);
+                compliance = drContext.digitalRiver.createElement(PAYMENT_METHOD_TYPE, complianceOptions);
                 compliance.mount(elementId);
+                drContext.setElement(PAYMENT_METHOD_TYPE, compliance);
             } catch (e) {
                 console.error(e);
                 drContext.clear();
